@@ -1,11 +1,11 @@
-/* PROGRAM TO PERFORM POSTFIX EVALUATION */
+/* PROGRAM TO PERFORM PREFIX EVALUATION */
 # include <stdio.h>
 # include <stdlib.h>
 # include <ctype.h>
 # include <math.h>
 # include <string.h>
 # define SIZE 100
-double stack [SIZE] ; char postfix[SIZE];
+double stack [SIZE] ; char prefix[SIZE];
 int top = -1;
 void push (double x)
 {
@@ -27,17 +27,29 @@ double pop()
    }
     return stack[top--];
 }
-double evaluate(char* postfix)
+
+void reverse(char * array)
 {
-    char* token = strtok(postfix," ");
+    char temp; int n = strlen(array);
+    for(int i = 0 ; i < n/2 ; i ++)
+    {
+        temp = array[i];
+        array[i] = array[n-i-1];
+        array[n-i-1] = temp ;
+    }
+
+}
+double evaluate(char* prefix)
+{
+    char* token = strtok(prefix," ");
     while(token != NULL)
     {
         if(isdigit(token[0]) || (token[0]== '-' && isdigit(token[1])))
             push(atof(token));
         else if (strlen(token) == 1)
         {
-            double val2 = pop();
             double val1 = pop();
+            double val2 = pop();
             switch(token[0])
             {
                 case '^':
@@ -88,10 +100,11 @@ double evaluate(char* postfix)
 
 int main()
 {
-    printf("Enter the postfix expression : ");
-    fgets(postfix,SIZE,stdin);
-    postfix[strcspn(postfix,"\n") ] = '\0';
-    double result = evaluate(postfix);
+    printf("Enter the prefix expression : ");
+    fgets(prefix,SIZE,stdin);
+    prefix[strcspn(prefix,"\n") ] = '\0';
+    reverse(prefix);
+    double result = evaluate(prefix);
     printf("The result is : %.2lf\n",result);
     return 0 ;
 }
