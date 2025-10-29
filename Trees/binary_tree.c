@@ -86,7 +86,7 @@ int main()
     root = createTree();
     printf("\n");
 
-     printf("The Inorder is : \n");
+    printf("The Inorder is : \n");
     inorder(root);
     printf("\n");
     printf("The Preorder is : \n");
