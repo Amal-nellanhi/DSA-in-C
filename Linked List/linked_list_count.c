@@ -1,5 +1,4 @@
 /* PROGRAM TO COUNT THE NODES IN A LINKED LIST */
-/* PROGRAM TO IMPLEMENT LINKED LIST OPERATIONS */
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct Node
