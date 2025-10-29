@@ -1,4 +1,4 @@
-/* PROGRAM TO IMPLEMENT A BINARY TREE */
+/* PROGRAM TO IMPLEMENT A BINARY TREE  , TO FIND ITS DEPTH */
 # include <stdio.h>
 # include <stdlib.h>
 typedef struct Node
