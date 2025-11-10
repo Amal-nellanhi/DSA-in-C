@@ -1,4 +1,4 @@
-<h1 align = 'center'>📓 DSA IN C</h1>
+<h1 align = 'center'>✨ DATA STRUCTURES AND ALGORITHM IN C ✨</h1>
 
 A comprehensive collection of **Data Structures and Algorithms** implemented in **C**.  
 This repository serves as a personal learning archive and reference for mastering the core foundations of programming logic and problem-solving in C.
