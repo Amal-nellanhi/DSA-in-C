@@ -54,6 +54,19 @@ double evaluate(char* postfix)
                         push(val1/val2);
                     }
                     break;
+                 case '%':
+                    if(val2 == 0)
+                    {
+                        printf("Zero division error ,Exiting !!");
+                        exit(1);
+                    }
+                    else
+                    {
+                        int a = (int)val1;
+                        int b = (int)val2;
+                        push(a%b);
+                    }
+                    break;
                 case '+':
                     push(val1 + val2);
                     break;
