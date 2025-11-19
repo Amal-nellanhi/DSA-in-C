@@ -31,7 +31,7 @@ char peek ()
 
 int isOperator(char ch)
 {
-    return (ch == '^' ||ch == '/' ||ch == '*' ||ch == '+' ||ch == '-');
+    return (ch == '^' ||ch == '/' ||ch == '*' ||ch == '+' ||ch == '-'|| ch =='%');
 }
 
 int precedence(char ch)
@@ -42,6 +42,7 @@ int precedence(char ch)
                 return 3;
         case '/':
         case '*':
+        case '%':
                 return 2;
         case '+':
         case '-':
